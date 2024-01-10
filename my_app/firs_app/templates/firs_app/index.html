@@ -1,0 +1,12 @@
+{% extends 'firs_app/layout.html' %}
+
+{% block title %}home page{% endblock %}
+
+{% block content %}
+<div class = "features">
+    <h1>Welcome to my website!</h1>
+    <p>This page is dedicated to my blog, here I tell and show everything about my life. Stay with me if you don't want to miss all the fun!</p>
+    <img src="https://i.pinimg.com/564x/37/78/bb/3778bb3bb63024da3c52aa0f47fdd603.jpg" alt="cat">
+    <a href="{% url 'about' %}" class = "btn btn-warning">About</a>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'firs_app/layout.html' %}
+
+{% block title %}delete note{% endblock %}
+
+{% block content %}
+<div class = "features">
+    <h1>delete note</h1>
+   <form  method="post">
+    {% csrf_token %}
+    <span>{{ error }}</span>
+    <button  class="btn btn-success" type = "submit">delete note</button>
+   </form>
+    
+</div>
+{% endblock %}

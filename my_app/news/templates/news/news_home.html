@@ -1,0 +1,21 @@
+{% extends 'firs_app/layout.html' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<div class = "features">
+    <h1>Blog</h1>
+    {% if news %}
+    {% for el in news %}
+    <div class="alert alert-warning">
+       <h3>{{ el.title }}</h3>
+       <p>{{ el.anons }}</p>
+       <a href="{% url 'blog-detail' el.id %}" class = "btn btn-warning">read more</a>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>You don't have notes!</p>
+    {% endif %}
+    
+</div>
+{% endblock %}
